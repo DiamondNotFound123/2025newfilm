@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 引入Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-image: url('巫师.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif; /* 使用Inter字体 */
+        text-align: center;
+    }
+    h1 {
+        font-size: 85px;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: slideDownFadeIn 1.5s ease-out forwards;
+        color: white; /* 白色文字 */
+        font-weight: 700; /* 加粗 */
+        letter-spacing: -2px; /* 字间距调整 */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+    }
+    h2 {
+        font-size: 65px;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: slideDownFadeIn 1.5s ease-out 0.5s forwards;
+        color: white; /* 白色文字 */
+        font-weight: 400; /* 正常粗细 */
+        letter-spacing: -1px; /* 字间距调整 */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* 文字阴影 */
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 130px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideUpFadeIn 1.5s ease-out 1s forwards;
+    }
+    .custom-button {
+        width: 300px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.1); /* 半透明背景 */
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3); /* 半透明边框 */
+        border-radius: 8px; /* 圆角 */
+        font-size: 25px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500; /* 中等粗细 */
+        text-align: center;
+        cursor: pointer;
+        backdrop-filter: blur(10px); /* 背景模糊效果 */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .custom-button:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* 悬停时背景变亮 */
+        transform: translateY(-2px); /* 悬停时轻微上移 */
+    }
+    .custom-button:active {
+        background-color: rgba(255, 255, 255, 0.3); /* 点击时背景更亮 */
+        transform: translateY(0); /* 点击时恢复原位 */
+    }
+    /* 向下滑动渐显动画 */
+    @keyframes slideDownFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* 向上滑动渐显动画 */
+    @keyframes slideUpFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+<title>Confidential Meeting's Movies Club</title>
+</head>
+<body>
+    <h1>Confidential Meeting's Movies Club</h1>
+    <h2>下一部你希望看什么？</h2>
+    <div class="button-container">
+        <a href="https://wj.qq.com/s2/19360385/022a/"><input type="button" value="点击以进行投票" class="custom-button" /></a>
+         <a href="index.html"><input type="button" value="票根→" class="custom-button" /></a>
+         <a href="查看历年观影记录.html"><input type="button" value="点击以查看历年观影记录" class="custom-button" /></a>
+       
+
+        
+    </div>
+</body>
+</html>
